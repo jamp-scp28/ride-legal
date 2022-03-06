@@ -21,9 +21,11 @@ Show Case - Project in Development
 Tools
 --------
 
-**:star: REACT**
-**:star: VITE**
-**:star: NODE**
+**:star: React.**
+
+**:star: Vite.**
+
+**:star: Node.**
 
 
 Author
