@@ -6,9 +6,18 @@ import HomeComponent from './Components/home/home'
 import AboutComponent from './Components/about/about'
 import PortafolioComponent from './Components/portafolio/portafolio'
 import FooterComponent from './Components/footer/footer'
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
+import AccountComponent from './Components/account/account'
 
 function App() {
   const [count, setCount] = useState(0)
+
+  const [arr, setArr] = useState<number[]>([]);
+
   type Game = {
     name: String;
     id: Number;
@@ -20,13 +29,14 @@ function App() {
   }
 
   return (
-    <div className="App">
-      <HeaderComponent></HeaderComponent>
-      <HomeComponent></HomeComponent>
-      <AboutComponent></AboutComponent>
-      <PortafolioComponent></PortafolioComponent>
-      <FooterComponent></FooterComponent>
-    </div>
+    <BrowserRouter>
+      <HeaderComponent />
+      <Routes>
+        <Route path="/account" element={<AccountComponent />} />
+        <Route path="/" element={<HomeComponent />} />
+      </Routes>
+      <FooterComponent />
+    </BrowserRouter>
   )
 }
 
